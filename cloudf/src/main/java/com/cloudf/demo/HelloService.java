@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient(value = "eureka-client1",fallback = HelloServiceFailure.class)
 public interface HelloService {
-    @RequestMapping(value = "/client")
+    @RequestMapping(value = "/helloConfig")
     String hello();
 }
