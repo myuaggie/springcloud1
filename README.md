@@ -1,12 +1,12 @@
 ## spring cloud
 
-### Eureka server (Spring Cloud Eureka)
+### Eureka server (Spring Cloud Eureka) [clouds]
 
 port:9000  
 
 ![s](https://raw.githubusercontent.com/myuaggie/springcloud1/master/img1.png)
 
-### Eureka client 1
+### Eureka client 1 [cloudc1]
 
 port:9001  
 
@@ -14,7 +14,7 @@ mappings:
 * /hello
 * /helloConfig   (fetching configuration files(eureka-client1.properties) from github)
 
-### Eureka client 2
+### Eureka client 2 [cloudc2]
 
 port:9002  
 
@@ -22,7 +22,7 @@ mappings:
 * /hello
 * /hello-world  (greeting template)
 
-### Eureka client 3
+### Eureka client 3 [cloudc3]
 
 port:9003  
 
@@ -30,7 +30,7 @@ mappings:
 * /hello
 * /client  (show all eureka clients)
 
-### config-server (Spring Cloud Bus)
+### config-server (Spring Cloud Bus) [cloudb]
 
 port:9050  
 
@@ -38,7 +38,7 @@ using rabbitmq (port:5672) to send message between config-server and eureka-clie
 ```
 url:localhost:9050/actuator/bus-refresh method:post to refresh the change on github  
 ```
-### feign-consumer (Spring Cloud Feign)
+### feign-consumer (Spring Cloud Feign) [cloudf]
 
 for load balance and Circuit Breaker(enable Hystrix)  
 
@@ -54,7 +54,7 @@ helloService1/2/3 correspond to eureka-client1/2/3
 HelloService1/2/3Failure correspond to circuit breaker of eureka-client1/2/3  
 
 
-### gateway-zuul (Spring Cloud Zuul)
+### gateway-zuul (Spring Cloud Zuul) [cloudz]
 
 port:9040  
 
